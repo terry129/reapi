@@ -345,12 +345,12 @@ output :
 
 
 #### 查詢所有RE能源別
+```json
 GET
 /re/generator/fueltypes
 查詢所有RE能源別
 input : none 
 output :
-```json
 [
     {
         "id": 1,

@@ -224,14 +224,15 @@ input : none
 output : 
 {
     "generatorId": 1281,
-    "reFuelType": "太陽能",
+    "reFuelTypeId": 1,
     "activatedAt": "2024-12-30",
     "status": 0,
-    "modifiedAt": "2025-03-05T15:34:29.293",
+    "modifiedAt": "2025-03-07T09:48:14.033",
     "modifiedBy": 12,
-    "nbsCustomerNumber": "12343888000",
-    "name": "台全公司光",
-    "accountName": "lien"
+    "nbsCustomerNumber": "1088006",
+    "name": "XXX",
+    "reFuelTypeName": "太陽能",
+    "accountName": "yyy"
 }
 ```
 
@@ -250,14 +251,15 @@ output :
 [
     {
         "generatorId": 1281,
-        "reFuelType": "太陽能",
+        "reFuelTypeId": 1,
         "activatedAt": "2024-12-30",
-        "status": 1,
-        "modifiedAt": null,
+        "status": 0,
+        "modifiedAt": "2025-03-07T09:48:14.033",
         "modifiedBy": 12,
-        "nbsCustomerNumber": "12343888000",
-        "name": "台全公司光",
-        "accountName": "lien"
+        "nbsCustomerNumber": "108006",
+        "name": "xxxx",
+        "reFuelTypeName": "太陽能",
+        "accountName": "yyy"
     }
 ]
 ```
@@ -287,13 +289,14 @@ input : none
 output : 
 {
     "generatorId": 538,
-    "reFuelType": null,
+     "reFuelTypeId": null,
     "activatedAt": null,
     "status": 1,
     "modifiedAt": null,
     "modifiedBy": null,
     "nbsCustomerNumber": "01292345044",
     "name": "波卡股份有限公司",
+    "reFuelTypeName": null,
     "accountName": null
 }
 ```
@@ -328,16 +331,56 @@ input : none
 output : 
 {
     "generatorId": 1281,
-    "reFuelType": "太陽能",
+    "reFuelTypeId": 1,
     "activatedAt": "2024-12-30",
     "status": 0,
-    "modifiedAt": "2025-03-05T15:34:29.293",
+    "modifiedAt": "2025-03-07T09:48:14.033",
     "modifiedBy": 12,
-    "nbsCustomerNumber": "12343888000",
-    "name": "台全公司光",
-    "accountName": "lien"
+    "nbsCustomerNumber": "108006",
+    "name": "xxxx",
+    "reFuelTypeName": "太陽能",
+    "accountName": "yyy"
 }
 ```
+
+
+#### 查詢所有RE能源別
+GET
+/re/generator/fueltypes
+查詢所有RE能源別
+input : none 
+output :
+```json
+[
+    {
+        "id": 1,
+        "name": "太陽能",
+        "orderNum": 1
+    },
+    {
+        "id": 2,
+        "name": "風力(陸域)",
+        "orderNum": 2
+    },
+    {
+        "id": 3,
+        "name": "風力(水域)",
+        "orderNum": 3
+    },
+    {
+        "id": 4,
+        "name": "小水力",
+        "orderNum": 4
+    },
+    {
+        "id": 5,
+        "name": "地熱",
+        "orderNum": 5
+    }
+]
+
+```
+
 
 
 ## glossary  
@@ -355,7 +398,8 @@ meterNo : 表號
 name : 發電端名稱 / 用電端名稱 
 accountName : 更新人員名稱
 generatorId: 發電端 ID
-reFuelType: 能源別
+reFuelTypeId: 能源別
+reFuelTypeName: 能源別名稱
 activatedAt: 加入RE起始月份
 status: 參與RE用電端狀態
 nbsCustomerNumber: 電號

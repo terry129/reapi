@@ -13,16 +13,21 @@ GET
 input : none
 output : 
 {
-    "year": 2025,
-    "annualQuota": 1400,
-    "percentage": 99.00,
-    "solarDesc": "太陽能",
-    "windOnshoreDesc": "風力(陸域)",
-    "windOffshoreDesc": "風力(水域)",
-    "hydropowerDesc": "小水力",
-    "geothermalDesc": "地熱",
-    "modifiedAt": "2025-03-04T13:16:11.01",
-    "modifiedBy": 1
+    "pass": true,
+    "message": "OK",
+    "data": 
+        {
+            "year": 2025,
+            "annualQuota": 1400,
+            "percentage": 99.00,
+            "solarDesc": "太陽能",
+            "windOnshoreDesc": "風力(陸域)",
+            "windOffshoreDesc": "風力(水域)",
+            "hydropowerDesc": "小水力",
+            "geothermalDesc": "地熱",
+            "modifiedAt": "2025-03-04T13:16:11.01",
+            "modifiedBy": 1
+        }
 }
 ```
 
@@ -63,32 +68,37 @@ input:
     "name": null
 }
 output:
-[
-    {
-        "loadId": 1,
-        "annualQuota": 10001,
-        "annQuotaModifiedAt": "2025-02-22T07:19:12.15",
-        "activatedAt": "2025-02-22",
-        "status": 1,
-        "modifiedAt": "2025-02-24T11:16:55.287",
-        "modifiedBy": 12,
-        "nbsCustomerNumber": "07728888917",
-        "name": "二一股份有限公司",
-        "accountName": "lien"
-    },
-    {
-        "loadId": 5214,
-        "annualQuota": 1002,
-        "annQuotaModifiedAt": "2025-03-24T10:30:31",
-        "activatedAt": null,
-        "status": 0,
-        "modifiedAt": "2025-02-27T10:29:45.997",
-        "modifiedBy": 11,
-        "nbsCustomerNumber": "00970301555",
-        "name": "山商股份有限公司",
-        "accountName": "wanyu"
-    }
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+        [
+            {
+                "loadId": 1,
+                "annualQuota": 10001,
+                "annQuotaModifiedAt": "2025-02-22T07:19:12.15",
+                "activatedAt": "2025-02-22",
+                "status": 1,
+                "modifiedAt": "2025-02-24T11:16:55.287",
+                "modifiedBy": 12,
+                "nbsCustomerNumber": "07728888917",
+                "name": "二一股份有限公司",
+                "accountName": "lien"
+            },
+            {
+                "loadId": 5214,
+                "annualQuota": 1002,
+                "annQuotaModifiedAt": "2025-03-24T10:30:31",
+                "activatedAt": null,
+                "status": 0,
+                "modifiedAt": "2025-02-27T10:29:45.997",
+                "modifiedBy": 11,
+                "nbsCustomerNumber": "00970301555",
+                "name": "山商股份有限公司",
+                "accountName": "wanyu"
+            }
+        ]
+}
 ```
 
 
@@ -126,32 +136,37 @@ input :
     "name": null
 }
 output :
-[
-    {
-        "loadId": 1,
-        "annualQuota": 10001,
-        "annQuotaModifiedAt": "2025-03-22T07:19:12.15",
-        "activatedAt": "2025-02-22",
-        "status": 1,
-        "modifiedAt": "2025-03-24T11:16:55.287",
-        "modifiedBy": 12,
-        "nbsCustomerNumber": "07728888917",
-        "name": "二一股份有限公司",
-        "accountName": "lien"
-    },
-    {
-        "loadId": 5214,
-        "annualQuota": 1002,
-        "annQuotaModifiedAt": "2025-03-24T10:30:31",
-        "activatedAt": "2025-02-22",
-        "status": 0,
-        "modifiedAt": "2025-03-05T11:28:44.557",
-        "modifiedBy": 1,
-        "nbsCustomerNumber": "00970301555",
-        "name": "山商股份有限公司",
-        "accountName": "lien"
-    }
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+    [
+        {
+            "loadId": 1,
+            "annualQuota": 10001,
+            "annQuotaModifiedAt": "2025-03-22T07:19:12.15",
+            "activatedAt": "2025-02-22",
+            "status": 1,
+            "modifiedAt": "2025-03-24T11:16:55.287",
+            "modifiedBy": 12,
+            "nbsCustomerNumber": "07728888917",
+            "name": "二一股份有限公司",
+            "accountName": "lien"
+        },
+        {
+            "loadId": 5214,
+            "annualQuota": 1002,
+            "annQuotaModifiedAt": "2025-03-24T10:30:31",
+            "activatedAt": "2025-02-22",
+            "status": 0,
+            "modifiedAt": "2025-03-05T11:28:44.557",
+            "modifiedBy": 1,
+            "nbsCustomerNumber": "00970301555",
+            "name": "山商股份有限公司",
+            "accountName": "lien"
+        }
+    ]
+}
 ```
 
 
@@ -159,17 +174,22 @@ output :
 ```json
 RE用電端電號List
 GET 
-/re/load/nbsnumber/exclude-re
+/re/load/nbscustnumber/exclude-re
 input: none
 output : 
-[
-    "00010225109",
-    "00012223509",
-    "00018226086",
-    "00020222106",
-    "00020226108",
-    "00020222201"
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+    [
+        "00010225109",
+        "00012223509",
+        "00018226086",
+        "00020222106",
+        "00020226108",
+        "00020222201"
+    ]
+}
 ```
 
 #### single 電號查詢 
@@ -180,16 +200,21 @@ RE用電端查詢By電號
 input : none
 output : 
 {
-    "loadId": 4354,
-    "annualQuota": null,
-    "annQuotaModifiedAt": null,
-    "activatedAt": null,
-    "status": 1,
-    "modifiedAt": null,
-    "modifiedBy": null,
-    "nbsCustomerNumber": "30023642381",
-    "name": "小莫股份有限公司",
-    "accountName": null
+    "pass": true,
+    "message": "OK",
+    "data": 
+        {
+            "loadId": 4354,
+            "annualQuota": null,
+            "annQuotaModifiedAt": null,
+            "activatedAt": null,
+            "status": 1,
+            "modifiedAt": null,
+            "modifiedBy": null,
+            "nbsCustomerNumber": "30023642381",
+            "name": "小莫股份有限公司",
+            "accountName": null
+        }
 }
 ```
 
@@ -223,16 +248,21 @@ RE用電端查詢By ID
 input : none 
 output : 
 {
-    "generatorId": 1281,
-    "reFuelTypeId": 1,
-    "activatedAt": "2024-12-30",
-    "status": 0,
-    "modifiedAt": "2025-03-07T09:48:14.033",
-    "modifiedBy": 12,
-    "nbsCustomerNumber": "1088006",
-    "name": "XXX",
-    "reFuelTypeName": "太陽能",
-    "accountName": "yyy"
+    "pass": true,
+    "message": "OK",
+    "data": 
+        {
+            "generatorId": 1281,
+            "reFuelTypeId": 1,
+            "activatedAt": "2024-12-30",
+            "status": 0,
+            "modifiedAt": "2025-03-07T09:48:14.033",
+            "modifiedBy": 12,
+            "nbsCustomerNumber": "1088006",
+            "name": "XXX",
+            "reFuelTypeName": "太陽能",
+            "accountName": "yyy"
+        }
 }
 ```
 
@@ -248,36 +278,46 @@ input :
     "name": null
 }
 output : 
-[
-    {
-        "generatorId": 1281,
-        "reFuelTypeId": 1,
-        "activatedAt": "2024-12-30",
-        "status": 0,
-        "modifiedAt": "2025-03-07T09:48:14.033",
-        "modifiedBy": 12,
-        "nbsCustomerNumber": "108006",
-        "name": "xxxx",
-        "reFuelTypeName": "太陽能",
-        "accountName": "yyy"
-    }
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+        [
+            {
+                "generatorId": 1281,
+                "reFuelTypeId": 1,
+                "activatedAt": "2024-12-30",
+                "status": 0,
+                "modifiedAt": "2025-03-07T09:48:14.033",
+                "modifiedBy": 12,
+                "nbsCustomerNumber": "108006",
+                "name": "xxxx",
+                "reFuelTypeName": "太陽能",
+                "accountName": "yyy"
+            }
+        ]
+}
 ```
 
 #### 電號 list
 ```json
 GET
-/re/generator/nbsnumber/exclude-re
+/re/generator/nbscustnumber/exclude-re
 查詢非RE發電端電號
 input : none
 output : 
-[
-    "00216512894",
-    "00315883890",
-    "00412680892",
-    "01217902844",
-    "01611562842"
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+        [
+            "00216512894",
+            "00315883890",
+            "00412680892",
+            "01217902844",
+            "01611562842"
+        ]
+}
 ```
 
 #### by single 電號 - RE發電端
@@ -288,16 +328,21 @@ RE發電端查詢By電號
 input : none 
 output : 
 {
-    "generatorId": 538,
-     "reFuelTypeId": null,
-    "activatedAt": null,
-    "status": 1,
-    "modifiedAt": null,
-    "modifiedBy": null,
-    "nbsCustomerNumber": "01292345044",
-    "name": "波卡股份有限公司",
-    "reFuelTypeName": null,
-    "accountName": null
+    "pass": true,
+    "message": "OK",
+    "data": 
+        {
+            "generatorId": 538,
+             "reFuelTypeId": null,
+            "activatedAt": null,
+            "status": 1,
+            "modifiedAt": null,
+            "modifiedBy": null,
+            "nbsCustomerNumber": "01292345044",
+            "name": "波卡股份有限公司",
+            "reFuelTypeName": null,
+            "accountName": null
+        }
 }
 ```
 
@@ -330,16 +375,21 @@ RE用電端查詢By ID
 input : none 
 output : 
 {
-    "generatorId": 1281,
-    "reFuelTypeId": 1,
-    "activatedAt": "2024-12-30",
-    "status": 0,
-    "modifiedAt": "2025-03-07T09:48:14.033",
-    "modifiedBy": 12,
-    "nbsCustomerNumber": "108006",
-    "name": "xxxx",
-    "reFuelTypeName": "太陽能",
-    "accountName": "yyy"
+    "pass": true,
+    "message": "OK",
+    "data": 
+        {
+            "generatorId": 1281,
+            "reFuelTypeId": 1,
+            "activatedAt": "2024-12-30",
+            "status": 0,
+            "modifiedAt": "2025-03-07T09:48:14.033",
+            "modifiedBy": 12,
+            "nbsCustomerNumber": "108006",
+            "name": "xxxx",
+            "reFuelTypeName": "太陽能",
+            "accountName": "yyy"
+        }
 }
 ```
 
@@ -351,33 +401,38 @@ GET
 查詢所有RE能源別
 input : none 
 output :
-[
-    {
-        "id": 1,
-        "name": "太陽能",
-        "orderNum": 1
-    },
-    {
-        "id": 2,
-        "name": "風力(陸域)",
-        "orderNum": 2
-    },
-    {
-        "id": 3,
-        "name": "風力(水域)",
-        "orderNum": 3
-    },
-    {
-        "id": 4,
-        "name": "小水力",
-        "orderNum": 4
-    },
-    {
-        "id": 5,
-        "name": "地熱",
-        "orderNum": 5
-    }
-]
+{
+    "pass": true,
+    "message": "OK",
+    "data": 
+        [
+            {
+                "id": 1,
+                "name": "太陽能",
+                "orderNum": 1
+            },
+            {
+                "id": 2,
+                "name": "風力(陸域)",
+                "orderNum": 2
+            },
+            {
+                "id": 3,
+                "name": "風力(水域)",
+                "orderNum": 3
+            },
+            {
+                "id": 4,
+                "name": "小水力",
+                "orderNum": 4
+            },
+            {
+                "id": 5,
+                "name": "地熱",
+                "orderNum": 5
+            }
+        ]
+}
 
 ```
 
